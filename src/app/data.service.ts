@@ -8,12 +8,15 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class DataService {
 
+SensorData: any;
+
   constructor(private http: HttpClient) {
   	this.http.get<any>('http://localhost:8080/allSensors').subscribe({next: data => {
+  			this.SensorData=data;
             
         },
         error: error => {
-            
+            console.log("An error occured while etching data");
         }
 
         
