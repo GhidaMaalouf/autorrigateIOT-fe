@@ -1,0 +1,6 @@
+<div >
+	<app-charts *ngIf='dataInputBar' [title]="'Average percentage of sensor data'" [xAxisoptions]='Xbar' [xAxisCategories]="categ"  [charttype]="'bar'"  [chartSeries]='dataInputBar' [chartWidth]='600' [yAxisoptions]='barOptions' [suffix]="' %'"></app-charts>
+</div>
+<div>
+	<app-charts *ngIf='dataInputLine' [title]="'Daily moisture sensor level'" [xAxisoptions]='Xline' [xAxisCategories]="categ2"  [charttype]="'line'"  [chartSeries]='dataInputLine' [chartWidth]='600' [yAxisoptions]='lineOptions' [suffix]="'%'"></app-charts>
+</div>

@@ -1,0 +1,12 @@
+
+<div [ngClass]="{'parent-half':chartWidth == '600', 'parent-full':chartWidth == '1500'}">
+
+	<highcharts-chart
+	  [Highcharts]="Highcharts"
+      [constructorType]="chartConstructor"
+	  [options]="chartOptions"
+	  [callbackFunction]="chartCallback"
+	  [(update)]="updateFlag"
+	  [runOutsideAngular]="runOutsideAngularFlag" >
+	</highcharts-chart>
+</div>
